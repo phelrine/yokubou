@@ -2,7 +2,6 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem "tweetstream"
 gem "twitter"
 gem "mongo"
 gem "bson"
