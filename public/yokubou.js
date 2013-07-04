@@ -6,11 +6,13 @@ var display_limit = 10;
 function fetch() {
     $.get('/yokubou', function(data){
         $.each(data, function(i, s){
-            if (s in text_set) {
+            var text = s.text;
+            console.log(s);
+            if (text in text_set) {
                 return true;
             }
-            text_set[s] = 1;
-            var node =$('<li>').append('"' + s + '"').hide();
+            text_set[text] = 1;
+            var node =$('<li>').append('"' + text + '"').hide();
             text_list.push(node);
         });
     });

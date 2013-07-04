@@ -11,6 +11,7 @@ end
 get '/yokubou' do
   content_type :json
   JSON.unparse(Yokubou::TWEET.find().sort('id').limit(100).map{|s|
-      s['text'].gsub(/人生だった$/, '')
+      s
+      # s['text'].gsub(/人生だった$/, '')
     })
 end
